@@ -5,193 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15_22_DISEÑO_WEB_CSS_FLEXBOX_SLIDES</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
     <style>
-        h2 {
-            margin-top: 50px;
-        }
-
-        #testDiv {
+        #enlaces{
             display: flex;
-            border: 1px solid black;
-            height: 30vh;
-
-        }
-
-        #testDiv div {
-            width: 20%;
-            padding: 25px;
-            background-color: aquamarine;
-            border: 1px solid black;
-        }
-
-        .justify1 {
-            justify-content: center;
-        }
-
-        .justify2 {
             justify-content: space-around;
         }
 
-        .justify3 {
-            justify-content: space-between;
+#enlaces a{
+            border: 1px solid black;
+            padding: 10px;;
         }
+        
 
-        .justify4 {
-            justify-content: flex-start;
-        }
-
-        .justify5 {
-            justify-content: flex-end;
-        }
-
-        .align1 {
-            align-items: flex-start;
-        }
-
-        .align2 {
-            align-items: flex-end;
-        }
-
-        .align3 {
-            align-items: center;
-        }
-
-        .align4 {
-            align-items: stretch;
-        }
-
-        .align5 {
-            align-items: baseline;
-        }
-
-        .alignSelf {
-            align-self: flex-start;
-        }
     </style>
-
-
 </head>
 
 <body>
 
+    <section id="grid">
+        <h2>En qué destaca Grid</h2>
+        <ul>
+            <li>Para diseños 2D (filas y columnas).</li>
+            <li>CSS Grid es perfecto para construir una imagen más grande. Hace que sea realmente fácil de manejar el
+                diseño de la página e incluso puede manejar diseños poco ortodoxos y asimétricos.</li>
+            <li>Requiere menos intervención de consulta, lo que hace que sea realmente potente en funcionalidades del
+                estilo auto layout: minmax(), repeat(), y auto-fill.</li>
+        </ul>
+    </section>
 
+    <section id="flex">
+        <h2>En qué destaca Flexbox</h2>
+        <ul>
+            <li>Flexbox es la mejor opción para alinear el contenido dentro de los elementos.</li>
+            <li>Utiliza Flexbox para posicionar los detalles más pequeños de un diseño.</li>
+            <li>Flexbox funciona mejor sólo en una dimensión (filas o columnas).</li>
+        </ul>
+    </section>
 
-    <div class="container">
-
-
-        <h1>15_22_DISEÑO_WEB_CSS_FLEXBOX_SLIDES</h1>
-
-
-
-        <div id="testDiv">
-            <div id="caja-1">CAJA 1</div>
-            <div id="caja-2">CAJA 2</div>
-            <div id="caja-3">CAJA 3</div>
-
-        </div>
-
-        <h2>justify-content</h2>
-        <button class="justifyBoton btn btn-primary" data-variable="1" type="button">Center</button>
-        <button class="justifyBoton btn btn-primary" data-variable="2" type="button">space-around</button>
-        <button class="justifyBoton btn btn-primary" data-variable="3" type="button">space-between</button>
-        <button class="justifyBoton btn btn-primary" data-variable="4" type="button">flex-start</button>
-        <button class="justifyBoton btn btn-primary" data-variable="5" type="button">flex-end</button>
-
-        <h2>Align-items</h2>
-        <button class="alignBoton btn btn-primary" data-variable="1" type="button">Flex-start</button>
-        <button class="alignBoton btn btn-primary" data-variable="2" type="button">Flex-end</button>
-        <button class="alignBoton btn btn-primary" data-variable="3" type="button">center</button>
-        <button class="alignBoton btn btn-primary" data-variable="4" type="button">stretch</button>
-        <button class="alignBoton btn btn-primary" data-variable="5" type="button">baseline</button>
-
-        <h2>Align-self</h2>
-        <form>
-            <label for="numeroCaja">Dime un número de caja:</label>
-            <input type="number" id="numeroCaja" name="numeroCaja" />
-            <input type="button" class="btn btn-primary" id="btnNumeroCaja" value="Dale"></input>
-        </form>
-
-
-
-
-        <h2>Para practicar</h2>
-        <a href="https://flexboxfroggy.com/#es" class="href" target="_blank">Flexboxfroggy</a>
-
-
-        <h2>Resumen</h2>
-        <div>
-            <img src="resumen-flex.png" alt="resumen flex" style="width: 90%; text-align: center;">
-        </div>
-
+    <div id="enlaces">
+        <a href="flex.html" target="_blank" title="Flexbox" >FlexBox 1</a>
+        <a href="box.html" target="_blank" title="Flexbox" >FlexBox 2</a>
+        <a href="grid.html" target="_blank" title="Flexbox" >Grid</a>
     </div>
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
-    <script>
-
-        $.fn.removeClassStartingWith = function (filter) {
-            $(this).removeClass(function (index, className) {
-                return (className.match(new RegExp("\\S*" + filter + "\\S*", 'g')) || []).join(' ')
-            });
-            return this;
-        };
-
-
-
-        $(".justifyBoton").click(function () {
-
-
-            $(".justifyBoton").removeClass("btn-dark");
-            $(".justifyBoton").addClass("btn-primary");
-            $(this).removeClass("btn-primary");
-            $(this).addClass("btn-dark");
-
-
-            var variable = $(this).data("variable");
-            console.log("se ha pinchado en el boton " + variable);
-            // usar la variable en código JavaScript
-            $("#testDiv").removeClassStartingWith('justify'); //quitamos todas las clases
-            $("#testDiv").addClass('justify' + variable);
-        });
-
-        $(".alignBoton").click(function () {
-
-
-
-            $(".alignBoton").removeClass("btn-dark");
-            $(".alignBoton").addClass("btn-primary");
-            $(this).removeClass("btn-primary");
-            $(this).addClass("btn-dark");
-
-            var variable = $(this).data("variable");
-            console.log("se ha pinchado en el boton " + variable);
-            // usar la variable en código JavaScript
-            $("#testDiv").removeClassStartingWith('align'); //quitamos todas las clases
-            $("#testDiv").addClass('align' + variable);
-        });
-
-        $('#btnNumeroCaja').click(function () {
-
-            var numeroCaja = $('input[name=numeroCaja]').val();
-            console.log(numeroCaja);
-            $('#testDiv div').removeClass('alignSelf');
-            $("#caja-" + numeroCaja).addClass('alignSelf'); //quitamos todas las clases
-        });
-
-
-
-
-
-
-
-    </script>
 
 </body>
 
