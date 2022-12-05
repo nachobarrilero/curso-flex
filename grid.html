@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .container-grid {
+            display: grid;
+            /* 1 fraccion de columna*/
+            grid-template-columns: 1fr 1fr;
+
+            /* 1 repite hasta completar bloques de 100px*/
+            grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-gap: 20px;
+            background-color: lightgrey;
+
+        }
+
+        .container-grid div {
+            padding: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>GRID</h1>
+
+
+        <div>
+            <ol>
+                <li>Gestiona el espacio en filas y columnas.</li>
+                <li>Es una evolución de flexbox.</li>
+                <li>No sustituye a flexbox.</li>
+                <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Url sobre
+                        grid</a></li>
+                <li><a href="https://cssgridgarden.com/#es" target="_blank">Juego</a></li>
+
+            </ol>
+
+        </div>
+        <div class="container-grid">
+            <div>Caja 1</div>
+            <div>Caja 2</div>
+            <div>Caja 3</div>
+            <div>Caja 4</div>
+            <div>Caja 5</div>
+            <div>Caja 6</div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
