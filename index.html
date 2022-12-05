@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
+
+        h2{
+            margin-top:50px;
+        }
+
         #testDiv {
             display: flex;
             border: 1px solid black;
@@ -86,18 +91,18 @@
         </div>
 
         <h2>justify-content</h2>
-        <button class="justifyBoton" data-variable="1" type="button" class="btn btn-primary">Center</button>
-        <button class="justifyBoton" data-variable="2" type="button" class="btn btn-primary">space-around</button>
-        <button class="justifyBoton" data-variable="3" type="button" class="btn btn-primary">space-between</button>
-        <button class="justifyBoton" data-variable="4" type="button" class="btn btn-primary">flex-start</button>
-        <button class="justifyBoton" data-variable="5" type="button" class="btn btn-primary">flex-end</button>
+        <button class="justifyBoton btn btn-primary" data-variable="1" type="button" >Center</button>
+        <button class="justifyBoton btn btn-primary" data-variable="2" type="button" >space-around</button>
+        <button class="justifyBoton btn btn-primary" data-variable="3" type="button" >space-between</button>
+        <button class="justifyBoton btn btn-primary" data-variable="4" type="button" >flex-start</button>
+        <button class="justifyBoton btn btn-primary" data-variable="5" type="button" >flex-end</button>
 
         <h2>Align-items</h2>
-        <button class="alignBoton" data-variable="1" type="button" class="btn btn-primary">Flex-start</button>
-        <button class="alignBoton" data-variable="2" type="button" class="btn btn-primary">Flex-end</button>
-        <button class="alignBoton" data-variable="3" type="button" class="btn btn-primary">center</button>
-        <button class="alignBoton" data-variable="4" type="button" class="btn btn-primary">stretch</button>
-        <button class="alignBoton" data-variable="5" type="button" class="btn btn-primary">baseline</button>
+        <button class="alignBoton btn btn-primary" data-variable="1" type="button" >Flex-start</button>
+        <button class="alignBoton btn btn-primary" data-variable="2" type="button" >Flex-end</button>
+        <button class="alignBoton btn btn-primary" data-variable="3" type="button" >center</button>
+        <button class="alignBoton btn btn-primary" data-variable="4" type="button" >stretch</button>
+        <button class="alignBoton btn btn-primary" data-variable="5" type="button" >baseline</button>
 
         <h2>Align-self</h2>
         <form>
@@ -129,6 +134,14 @@
 
 
         $(".justifyBoton").click(function () {
+
+
+            $(".justifyBoton").removeClass("btn-dark");
+            $(".justifyBoton").addClass("btn-primary");
+            $(this).removeClass("btn-primary");
+            $(this).addClass("btn-dark");
+            
+
             var variable = $(this).data("variable");
             console.log("se ha pinchado en el boton " + variable);
             // usar la variable en código JavaScript
@@ -137,6 +150,14 @@
         });
 
         $(".alignBoton").click(function () {
+
+
+
+            $(".alignBoton").removeClass("btn-dark");
+            $(".alignBoton").addClass("btn-primary");
+            $(this).removeClass("btn-primary");
+            $(this).addClass("btn-dark");
+
             var variable = $(this).data("variable");
             console.log("se ha pinchado en el boton " + variable);
             // usar la variable en código JavaScript
