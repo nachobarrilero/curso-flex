@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-
-        h2{
-            margin-top:50px;
+        h2 {
+            margin-top: 50px;
         }
 
         #testDiv {
@@ -48,23 +47,27 @@
             justify-content: flex-end;
         }
 
-        .align1{
+        .align1 {
             align-items: flex-start;
         }
-        .align2{
+
+        .align2 {
             align-items: flex-end;
         }
-        .align3{
+
+        .align3 {
             align-items: center;
         }
-        .align4{
+
+        .align4 {
             align-items: stretch;
         }
-        .align5{
+
+        .align5 {
             align-items: baseline;
         }
 
-        .alignSelf{
+        .alignSelf {
             align-self: flex-start;
         }
     </style>
@@ -76,7 +79,7 @@
 
 
 
-    <div class="container-fluid">
+    <div class="container">
 
 
         <h1>15_22_DISEÑO_WEB_CSS_FLEXBOX_SLIDES</h1>
@@ -91,30 +94,39 @@
         </div>
 
         <h2>justify-content</h2>
-        <button class="justifyBoton btn btn-primary" data-variable="1" type="button" >Center</button>
-        <button class="justifyBoton btn btn-primary" data-variable="2" type="button" >space-around</button>
-        <button class="justifyBoton btn btn-primary" data-variable="3" type="button" >space-between</button>
-        <button class="justifyBoton btn btn-primary" data-variable="4" type="button" >flex-start</button>
-        <button class="justifyBoton btn btn-primary" data-variable="5" type="button" >flex-end</button>
+        <button class="justifyBoton btn btn-primary" data-variable="1" type="button">Center</button>
+        <button class="justifyBoton btn btn-primary" data-variable="2" type="button">space-around</button>
+        <button class="justifyBoton btn btn-primary" data-variable="3" type="button">space-between</button>
+        <button class="justifyBoton btn btn-primary" data-variable="4" type="button">flex-start</button>
+        <button class="justifyBoton btn btn-primary" data-variable="5" type="button">flex-end</button>
 
         <h2>Align-items</h2>
-        <button class="alignBoton btn btn-primary" data-variable="1" type="button" >Flex-start</button>
-        <button class="alignBoton btn btn-primary" data-variable="2" type="button" >Flex-end</button>
-        <button class="alignBoton btn btn-primary" data-variable="3" type="button" >center</button>
-        <button class="alignBoton btn btn-primary" data-variable="4" type="button" >stretch</button>
-        <button class="alignBoton btn btn-primary" data-variable="5" type="button" >baseline</button>
+        <button class="alignBoton btn btn-primary" data-variable="1" type="button">Flex-start</button>
+        <button class="alignBoton btn btn-primary" data-variable="2" type="button">Flex-end</button>
+        <button class="alignBoton btn btn-primary" data-variable="3" type="button">center</button>
+        <button class="alignBoton btn btn-primary" data-variable="4" type="button">stretch</button>
+        <button class="alignBoton btn btn-primary" data-variable="5" type="button">baseline</button>
 
         <h2>Align-self</h2>
         <form>
             <label for="numeroCaja">Dime un número de caja:</label>
-            <input type="number" id="numeroCaja"  name="numeroCaja"/>
+            <input type="number" id="numeroCaja" name="numeroCaja" />
             <input type="button" class="btn btn-primary" id="btnNumeroCaja" value="Dale"></input>
-          </form>
+        </form>
 
+
+
+
+        <h2>Para practicar</h2>
+        <a href="https://flexboxfroggy.com/#es" class="href" target="_blank">Flexboxfroggy</a>
+
+
+        <h2>Resumen</h2>
+        <div>
+            <img src="resumen-flex.png" alt="resumen flex" style="width: 90%; text-align: center;">
+        </div>
 
     </div>
-
-
 
 
 
@@ -140,7 +152,7 @@
             $(".justifyBoton").addClass("btn-primary");
             $(this).removeClass("btn-primary");
             $(this).addClass("btn-dark");
-            
+
 
             var variable = $(this).data("variable");
             console.log("se ha pinchado en el boton " + variable);
@@ -170,7 +182,7 @@
             var numeroCaja = $('input[name=numeroCaja]').val();
             console.log(numeroCaja);
             $('#testDiv div').removeClass('alignSelf');
-            $("#caja-"+numeroCaja).addClass('alignSelf'); //quitamos todas las clases
+            $("#caja-" + numeroCaja).addClass('alignSelf'); //quitamos todas las clases
         });
 
 
